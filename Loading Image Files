@@ -1,0 +1,24 @@
+image_files = [
+    'images.jpg',
+    'aic-home (1).jpg',
+    'jpegls-home (1).jpg',
+    'Un_super_paysage.jpg',
+    'what-is-jpeg-format (1).jpg'
+]
+
+for image_path in image_files:
+    if os.path.exists(image_path):
+        # Read the image file
+        image = tf.io.read_file(image_path)
+        # Decode as JPEG and convert to grayscale
+        image = tf.io.decode_jpeg(image, channels=1)
+        # Resize the image to 300x300
+        image = tf.image.resize(image, [300, 300])
+        # Display the image
+        plt.figure(figsize=(5,5))
+        plt.imshow(tf.squeeze(image), cmap='gray')  # remove single-dimensional entries
+        plt.axis('off')
+        plt.title(f'Grayscale Image: {image_path}')
+        plt.show()
+    else:
+        print(f"File not found: {image_path}")
