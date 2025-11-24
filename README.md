@@ -44,8 +44,8 @@ Evaluate performance using test images.
 
 Use the trained model for predictions.
 
-✅ Description of Your Provided Files
-Your list shows a complete CNN-based image classification project using MNIST digits.
+✅ Description of my Provided Files
+here list shows a complete CNN-based image classification project using MNIST digits.
 
 📁 Core CNN Model & Training
 Training a CNN on MNIST with TensorFlow Keras.py
